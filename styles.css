@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+    180deg,
+    rgb(160, 152, 160),
+    rgb(182, 160, 182)
+  );
+
+  min-height: 100dvh;
+  overflow: hidden;
+}
+
+.section-init {
+  text-align: center;
+  padding-top: 20px;
+
+  & .section-title {
+    letter-spacing: 1.3px;
+    background-image: linear-gradient(
+      to right,
+      rgb(64, 26, 201),
+      rgb(77, 29, 141)
+    );
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+.section-calculator {
+  padding-top: 20px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.calculator {
+  background-color: rgb(39, 38, 38);
+
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-auto-rows: 70px;
+  gap: 10px;
+  padding: 15px 20px;
+
+  grid-template-areas:
+    "screen screen screen screen"
+    "clear clear delete delete"
+    "one two three plus"
+    "four five six minus"
+    "seven eight nine mult"
+    "decimal zero divide equal";
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.btn:not(.btn-result) {
+  background: linear-gradient(145deg, #969393, #686666);
+  font-weight: 700;
+  color: black;
+}
+
+.screen {
+  background-color: lightblue;
+  grid-area: screen;
+  padding: 5px 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: auto;
+}
+
+.operation {
+  letter-spacing: 1.2px;
+  font-weight: 500;
+}
+
+.operation-result {
+  align-self: flex-end;
+}
+
+.btn-clear {
+  grid-area: clear;
+}
+
+.btn-delete {
+  grid-area: delete;
+}
+
+.btn-1 {
+  grid-area: one;
+}
+
+.btn-2 {
+  grid-area: two;
+}
+
+.btn-3 {
+  grid-area: three;
+}
+
+.btn-plus {
+  grid-area: plus;
+}
+
+.btn-4 {
+  grid-area: four;
+}
+
+.btn-5 {
+  grid-area: five;
+}
+
+.btn-6 {
+  grid-area: six;
+}
+
+.btn-minus {
+  grid-area: minus;
+}
+
+.btn-7 {
+  grid-area: seven;
+}
+
+.btn-8 {
+  grid-area: eight;
+}
+
+.btn-9 {
+  grid-area: nine;
+}
+
+.btn-mult {
+  grid-area: mult;
+}
+
+.btn-decimal {
+  grid-area: decimal;
+}
+
+.btn-0 {
+  grid-area: zero;
+}
+
+.btn-divide {
+  grid-area: divide;
+}
+
+.btn-result {
+  grid-area: equal;
+  font-weight: 700;
+  background-color: rgb(35, 35, 179);
+  color: white;
+}
+
+.mouse-follower {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #fff;
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
+  left: -25px;
+  top: -25px;
+  width: 50px;
+  height: 50px;
+}
