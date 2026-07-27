@@ -1,6 +1,6 @@
 # Simple Calculator
 
-This is a project to practice `JavaScript`. Later, I'll make some features.
+This is a project to practice `JavaScript`.
 
 # Stack
 
